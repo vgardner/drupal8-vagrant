@@ -26,9 +26,7 @@ the source code.
   2. Install Vagrant
      http://docs.vagrantup.com/v2/installation/index.html
 
-  3. Prepare VDD source code
-     Download and unpack VDD source code and place it inside your home
-     directory.
+  3. run ``git clone https://github.com/vgardner/drupal8-vagrant.git``
 
   4. Adjust configuration (optional)
      You can edit config.json file to adjust your settings. If you use VDD first
