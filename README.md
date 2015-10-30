@@ -40,7 +40,7 @@ Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
 anytime.
 
-  8. Adjust configuration (optional)
+  * Adjust configuration (optional)
      You can edit config.json file to adjust your settings. If you use VDD first
      time it's recommended to leave config.json as is. Sample config.json is
      just fine. By default Drupal 8 and Drupal 7 sites are configured.
