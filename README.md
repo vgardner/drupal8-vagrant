@@ -38,7 +38,7 @@ the source code.
       drush @drupal8 si standard -y
       ```
 
-Now you have ready to use virtual development server. By default 2 sites
+  * Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
 anytime.
 
@@ -48,14 +48,26 @@ anytime.
      just fine. By default Drupal 8 and Drupal 7 sites are configured.
      You can validate your JSON file at http://jsonlint.com/
 
+Connect To Mysql
+----------------
+```
+MySQL Host: 127.0.0.1
+Username: root
+Password: root
+Port: 3306 (default)
 
-Basic Usage
+SSH Host: 192.168.44.44
+Username: vagrant
+Password: vagrant
+```
+
+Vagrant basic Usage
 -----------
 
-Inside your VDD copy's directory you can find 'data' directory. This directory
+In the root directory you can find 'data' directory. This directory
 is visible (synchronized) to your virtual machine, so you can edit your project
-locally with your favorite editor. VDD will never delete data from data directory,
-but you should backup it.
+locally with your favorite editor. You can safely destroy your Vagrant box, this
+folder will not be altered.
 
 Vagrant's basic commands (should be executed inside VDD directory):
 
