@@ -32,9 +32,9 @@ the source code.
   
   7. Download or clone your Drupal 8/7 project into /var/www/drupal8 (or /var/www/drupal8)
      For a fresh D8 or 7 installation you can run:
-      ``cd /var/www/drupal8
+      ```cd /var/www/drupal8
       git clone --branch 8.0.x http://git.drupal.org/project/drupal.git .
-      drush @drupal8 si standard -y``
+      drush @drupal8 si standard -y```
 
 Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
