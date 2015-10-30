@@ -21,22 +21,16 @@ the source code.
 
   3. run ``git clone https://github.com/vgardner/drupal8-vagrant.git``
 
-  4. Adjust configuration (optional)
-     You can edit config.json file to adjust your settings. If you use VDD first
-     time it's recommended to leave config.json as is. Sample config.json is
-     just fine. By default Drupal 8 and Drupal 7 sites are configured.
-     You can validate your JSON file at http://jsonlint.com/
-
-  5. To build your environment, in the root of the folder, run ``vagrant up``
+  4. To build your environment, in the root of the folder, run ``vagrant up``
 
      Vagrant will start to build your environment. You'll see green status
      messages while Chef is configuring the system.
   
-  6. Add your the box's IP to your hosts file ``192.168.44.44 drupal8.dev drupal7.dev``
+  5. Add your the box's IP to your hosts file ``192.168.44.44 drupal8.dev drupal7.dev``
   
-  7. To SSH into your Vagrant box, run ``vagrant ssh``
+  6. To SSH into your Vagrant box, run ``vagrant ssh``
   
-  8. Download or clone your Drupal 8/7 project into /var/www/drupal8 (or /var/www/drupal8)
+  7. Download or clone your Drupal 8/7 project into /var/www/drupal8 (or /var/www/drupal8)
      For a fresh D8 or 7 installation you can run:
   ``cd /var/www/drupal8
     git clone --branch 8.0.x http://git.drupal.org/project/drupal.git .
@@ -45,6 +39,12 @@ the source code.
 Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
 anytime.
+
+  8. Adjust configuration (optional)
+     You can edit config.json file to adjust your settings. If you use VDD first
+     time it's recommended to leave config.json as is. Sample config.json is
+     just fine. By default Drupal 8 and Drupal 7 sites are configured.
+     You can validate your JSON file at http://jsonlint.com/
 
 
 Basic Usage
