@@ -96,14 +96,6 @@ Vagrant's basic commands (should be executed inside VDD directory):
 Official Vagrant site has beautiful documentation.
 http://docs.vagrantup.com/v2/
 
-
-Extending Drupal Vagrant
-------------------------
-
-VDD can be easily customized and extended. You may implement your custom
-cookbook and place it inside chef/cookbooks/custom directory or you may use
-berkshelf to download cookbook from remote repository.
-
 Cookbook inside chef/cookbooks/custom directory
 -----------------------------------------------
 
@@ -120,11 +112,6 @@ Remote cookbook using berkshelf
   1. Install berkshelf on your host machine.
   2. Include link to remote cookbooks' repository in Berksfile.
   3. Delete Berksfile.lock file and chef/cookbooks/berks directory.
-  4. Run next command inside VDD directory. It will download all dependencies.
-    $ berks vendor chef/cookbooks/berks
-
-
-If you find a problem, incorrect comment, obsolete or improper code or such,
-please let us know by creating a new issue at
-http://drupal.org/project/issues/vdd
+  4. Run next command inside the root directory. It will download all dependencies.
+    ``$ berks vendor chef/cookbooks/berks``
 
