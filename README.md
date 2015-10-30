@@ -1,23 +1,16 @@
-Vagrant Drupal Development
---------------------------
+Drupal Vagrant
+--------------
 
-Vagrant Drupal Development (VDD) is fully configured and ready to use
-development environment built with VirtualBox, Vagrant, Linux and Chef Solo
-provisioner.
+Drupal Vagrant is a ready to go and fully configured development environment built
+with VirtualBox, Vagrant, Linux and Chef Solo provisioner.
 
 The main goal of the project is to provide easy to use, fully functional, highly
 customizable and extendable Linux based environment for Drupal development.
 
-Full VDD documentation can be found on drupal.org:
-https://drupal.org/node/2008758
-
-For support, join us on IRC in the #drupal-vdd channel.
-
-
 Getting Started
 ---------------
 
-VDD uses Chef Solo provisioner. It means that your environment is built from
+Drupal Vagrant uses Chef Solo provisioner. It means that your environment is built from
 the source code.
 
   1. Install VirtualBox
@@ -32,22 +25,22 @@ the source code.
      You can edit config.json file to adjust your settings. If you use VDD first
      time it's recommended to leave config.json as is. Sample config.json is
      just fine. By default Drupal 8 and Drupal 7 sites are configured.
+     You can validate your JSON file at http://jsonlint.com/
 
-  6. Build your environment
-     Please double check your config.json file after editing. VDD can't start
-     with invalid configuration. We recommend to use JSON validator.
-     This one is great: http://jsonlint.com/
-
-     To build your environment execute next command inside your VDD copy:
-     $ vagrant up
+  5. To build your environment, in the root of the folder, run ``vagrant up``
 
      Vagrant will start to build your environment. You'll see green status
      messages while Chef is configuring the system.
-
-  7. Visit 192.168.44.44 address
-     If you didn't change default IP address in config.json file you'll see
-     VDD's main page. Main page has links to configured sites, development tools
-     and list of frequently asked questions.
+  
+  6. Add your the box's IP to your hosts file ``192.168.44.44 drupal8.dev drupal7.dev``
+  
+  7. To SSH into your Vagrant box, run ``vagrant ssh``
+  
+  8. Download or clone your Drupal 8/7 project into /var/www/drupal8 (or /var/www/drupal8)
+     For a fresh D8 or 7 installation you can run:
+  ``cd /var/www/drupal8
+    git clone --branch 8.0.x http://git.drupal.org/project/drupal.git .
+    drush @drupal8 si standard -y``
 
 Now you have ready to use virtual development server. By default 2 sites
 are configured: Drupal 7 and Drupal 8. You can add new ones in config.json file
@@ -64,25 +57,25 @@ but you should backup it.
 
 Vagrant's basic commands (should be executed inside VDD directory):
 
-  * $ vagrant ssh
+  * ``$ vagrant ssh``
     SSH into virtual machine.
 
-  * $ vagrant up
+  * ``$ vagrant up``
     Start virtual machine.
 
-  * $ vagrant halt
+  * ``$ vagrant halt``
     Halt virtual machine.
 
-  * $ vagrant destroy
+  * ``$ vagrant destroy``
     Destroy your virtual machine. Source code and content of data directory will
     remain unchangeable. VirtualBox machine instance will be destroyed only. You
     can build your machine again with 'vagrant up' command. The command is
     useful if you want to save disk space.
 
-  * $ vagrant provision
+  * ``$ vagrant provision``
     Configure virtual machine after source code change.
 
-  * $ vagrant reload
+  * ``$ vagrant reload``
     Reload virtual machine. Useful when you need to change network or
     synced folders settings.
 
@@ -90,8 +83,8 @@ Official Vagrant site has beautiful documentation.
 http://docs.vagrantup.com/v2/
 
 
-Extending VDD
--------------
+Extending Drupal Vagrant
+------------------------
 
 VDD can be easily customized and extended. You may implement your custom
 cookbook and place it inside chef/cookbooks/custom directory or you may use
