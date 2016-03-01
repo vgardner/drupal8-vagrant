@@ -101,7 +101,7 @@ Cookbook inside chef/cookbooks/custom directory
 
   1. Take a look at vdd_example cookbook inside chef/cookbooks/custom directory.
   2. Create your own cookbook and place it inside chef/cookbooks/custom directory.
-  3. Include your recipies in run_list in vdd.json role file inside chef/roles directory.
+  3. Include your recipes in run_list in vdd.json role file inside chef/roles directory.
 
 Remote cookbook using berkshelf
 -------------------------------
